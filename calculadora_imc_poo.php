@@ -40,12 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form action="calculadora_imc_poo.php" method="post">
         <label for="peso">Peso (kg):</label>
-        <input type="number" id="peso" name="peso" step="0.01" required><br><br>
+        <input type="number" id="peso" name="peso" step="0.02" required><br><br>
 
         <label for="altura">Altura (m):</label>
-        <input type="number" id="altura" name="altura" step="0.01" required><br><br>
+        <input type="number" id="altura" name="altura" step="0.02" required><br><br>
 
         <input type="submit" value="Calcular IMC">
     </form>
+
 </body>
 </html>
