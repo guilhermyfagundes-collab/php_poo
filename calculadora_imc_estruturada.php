@@ -1,10 +1,10 @@
 </body>
 </html><!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de IMC - Estruturada</title>
 </head>
 <body>
     <h1>Calculadora de IMC - Estruturada</h1>
