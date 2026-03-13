@@ -15,3 +15,4 @@ for ($i = 0; $i < 3; $i++) {
     echo "O Valor do desconto de $nome é de R$ $desconto. <br>";
 }
 
+
