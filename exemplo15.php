@@ -43,10 +43,17 @@ class Poupanca extends Conta
       $this->juros =$juros;
     }
 
+    function creditar($valor)
+    {
+        parent::creditar($valor);
+        $this->atualizarJuros();
+    }
+
     function atualizarJuros()
     {
         $this->saldo = $this->saldo * (1 + $this->juros);
     }
+
 
 }
 
@@ -60,3 +67,4 @@ $poupanca->creditar(50);
 $poupanca->debitar(100);
 $poupanca->atualizarJuros();
 echo "Saldo da Poupança $poupanca->numero: $poupanca->saldo <br>";
+
