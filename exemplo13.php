@@ -2,11 +2,11 @@
 
 class Conta
 {
-    // Atributos - propriedades - Campos
+    // Atributos - Propriedades - Campos
     public $numero;
     public $saldo;
 
-    // Métodos - Construtore
+    // Método Construtor
     function __construct($numero, $saldo)
     {
         $this->numero = $numero;
@@ -24,18 +24,25 @@ class Conta
         $this->saldo = $this->saldo - $valor;
     }
 
-    function transferir($outraConta, $valor) 
+    function transferir($outraConta, $valor)
     {
-        if ($this->saldo > $valor) {
+        if ($this->saldo >= $valor) {
             $this->debitar($valor);
             $outraConta->creditar($valor);
         }
     }
-}    
+}
 
 class Poupanca extends Conta
 {
-    public $juros = 0.05;
+    public $juros;
+
+    function __construct($numero, $saldo, $juros)
+    {
+        $this->numero = $numero;
+        $this->saldo = $saldo;
+        $this->juros = $juros;
+    }
 
     function atualizarJuros()
     {
@@ -44,13 +51,13 @@ class Poupanca extends Conta
 
 }
 
-$conta= new Conta(1, 150);
+$conta = new Conta(1, 150);
 $conta->creditar(50);
 $conta->debitar(100);
 echo "Saldo da conta $conta->numero: $conta->saldo <br>";
 
-$poupanca = new Poupanca(2, 150);
+$poupanca = new Poupanca(2, 150, 0.10);
 $poupanca->creditar(50);
-$poupanca->creditar(100);
+$poupanca->debitar(100);
 $poupanca->atualizarJuros();
-echo "Saldo da poupança $poupanca->numero: $poupanca->saldo <br>";
+echo "Saldo da Poupança $poupanca->numero: $poupanca->saldo <br>";
