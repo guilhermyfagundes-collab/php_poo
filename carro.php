@@ -22,8 +22,8 @@ class Carro {
 
 $meuCarro = new Carro("Senai-Mobile", 0);
 
-$meuCarro->setVelocidade(5000);
-$meuCarro->getVelocidade(-60);   
+$meuCarro->setVelocidade(200);
+$meuCarro->getVelocidade(0);   
 
 echo "Modelo: " . $meuCarro->modelo . "<br>";
 echo "Velocidade atual: " . $meuCarro->getVelocidade() . " km/h";
